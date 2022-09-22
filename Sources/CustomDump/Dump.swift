@@ -262,7 +262,7 @@ public func customDump<T, TargetStream>(
         }
       }
 
-      if let superclassMirror = mirror.superclassMirror, value is CustomDumpIncludeSuperclass {
+      if let superclassMirror = mirror.superclassMirror {
         out.write("\n")
         dumpMirror(mirror: superclassMirror)
       }
